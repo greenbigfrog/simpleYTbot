@@ -45,7 +45,7 @@ bot.message(contains: 'youtu') do |event|
       msg = ""
       msg << "```md\n"
       msg << "# #{vid.title}\n"
-      msg << "[Description][#{vid.description}]\n"
+      msg << "[Description][#{vid.description[0..99]}]\n"
       msg << "[Views][#{vid.view_count}]\n"
       msg << "[Length][#{Time.at(vid.duration).utc.strftime("%H:%M:%S")}]\n"
       msg << "[Likes/Dislikes][#{vid.like_count}/#{vid.dislike_count}]\n"
