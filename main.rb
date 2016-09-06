@@ -25,6 +25,10 @@ bot.command(:stats, description: 'shows a few stats about the bot') do |event|
   "Currently I'm on **#{event.bot.servers.size} servers** with a total user count of **#{members} users** in **#{event.bot.servers.collect { |x, y| y.channels.size }.inject(0, &:+)} channels**!"
 end
 
+bot.command(:simple, description: 'GIves you an invite to the bots help server') do |event|
+  "For help etc. join the bots support server at https://discord.me/simplesupport"
+end
+
 yt_regex = %r{
     (?:youtube(?:-nocookie)?\.com\/
     (?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|
